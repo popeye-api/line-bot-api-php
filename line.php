@@ -39,7 +39,7 @@ if ( sizeof($request_array['events']) > 0 )
 		     $obj = json_decode($result);
 
 		     $reply_message = $result;
-		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'.<br>.'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
+		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'.'<br>'.'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
 		     //$reply_message = 'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
 		}
 	   	//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
