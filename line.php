@@ -39,8 +39,15 @@ if ( sizeof($request_array['events']) > 0 )
 		     $obj = json_decode($result);
 
 		     $reply_message = $result;
-		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'."\n".'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
-		     //$reply_message = 'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
+		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน';
+		     $reply_message += "\n".'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน';
+		     $reply_message += "\n".'รักษาอยู่ '. $obj->{'Hospitalized'}.' คน';
+		     $reply_message += "\n".'เสียชีวิต '. $obj->{'Deaths'}.' คน';
+		     $reply_message += "\n".'ผู้ติดชื้อใหม่ '. $obj->{'NewConfirmed'}.' คน';
+		     $reply_message += "\n".'รักษาหายแล้วในวันนี้ '. $obj->{'NewRecovered'}.' คน';
+		     $reply_message += "\n".'ผู้เข้ารับการรักษาในวันนี้ '. $obj->{'NewHospitalized'}.' คน';
+		     $reply_message += "\n".'เสียชีวิติในวันนี้ '. $obj->{'NewDeaths'}.' คน';
+		     $reply_message += "\n".'รายงานของวันที่ '. $obj->{'UpdateDate'}.;
 		}
 	   	//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
    }
