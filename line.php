@@ -47,7 +47,7 @@ if ( sizeof($request_array['events']) > 0 )
 		     $reply_message += "\n".'รักษาหายแล้วในวันนี้ '. $obj->{'NewRecovered'}.' คน';
 		     $reply_message += "\n".'ผู้เข้ารับการรักษาในวันนี้ '. $obj->{'NewHospitalized'}.' คน';
 		     $reply_message += "\n".'เสียชีวิติในวันนี้ '. $obj->{'NewDeaths'}.' คน';
-		     $reply_message += "\n".'รายงานของวันที่ '. $obj->{'UpdateDate'}.;
+		     $reply_message += "\n".'รายงานของวันที่ '. $obj->{'UpdateDate'};
 		}
 	   	//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
    }
