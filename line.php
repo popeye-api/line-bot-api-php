@@ -86,12 +86,12 @@ if ( sizeof($request_array['events']) > 0 )
 			$err = curl_error($curl);
 
 			curl_close($curl);
-
+			$test = json_decode($response);
 			if ($err) {
 				echo "cURL Error #:" . $err;
 			} else {
 				echo $response;
-				$reply_message = $response;
+				$reply_message = $test->{'message'};
 			}
 			
  		}
