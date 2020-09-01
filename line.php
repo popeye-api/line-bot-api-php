@@ -46,7 +46,7 @@ if ( sizeof($request_array['events']) > 0 )
 		}
 	   	
  	   	$str_msg = explode(" ",$text);
-// 	   	if(str_msg[0]=="@บอท"){
+ 	   	if(str_msg[0]=="@บอท"){
 // 		$curl = curl_init();
 // 			curl_setopt_array($curl, array(
 // 				CURLOPT_URL => "https://thaiqa.p.rapidapi.com/predict",
@@ -76,7 +76,7 @@ if ( sizeof($request_array['events']) > 0 )
 // 			} else {
 // 				echo $response;
 // 			}	
-// 		}
+ 		}
 	   	//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
    }
    else
