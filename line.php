@@ -57,7 +57,7 @@ if ( sizeof($request_array['events']) > 0 )
 				CURLOPT_TIMEOUT => 30,
 				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 				CURLOPT_CUSTOMREQUEST => "POST",
-				CURLOPT_POSTFIELDS => '"[    {      "paragraphs": [        {          "qas": [            {              "id": "1",              "question": '.$str_msg[1].'              }          ],          "context": "ราคาทองคำแท่งวันนี้ ราคาขาย 28,800.00บาท ราคาซื้อ 28,700.00บาท ชื่อผู้พัฒนา นางสาวอภิชญา ขวัญจังหวัด 61160080"        }      ]    }]"',
+				CURLOPT_POSTFIELDS => '"[    {      "paragraphs": [        {          "qas": [            {              "id": "1",              "question": '.$str_msg[1].'              }          ],          "context": "ราคาทองวันนี้ ราคาขาย 28,800.00บาท ราคาซื้อ 28,700.00บาท ชื่อผู้พัฒนา นางสาวอภิชญา ขวัญจังหวัด 61160080"        }      ]    }]"',
 				CURLOPT_HTTPHEADER => array(
 					"accept: application/json",
 					"content-type: application/json",
