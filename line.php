@@ -52,7 +52,7 @@ if ( sizeof($request_array['events']) > 0 )
 				CURLOPT_URL => "https://thaiqa.p.rapidapi.com/predict",
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_FOLLOWLOCATION => true,
-				CURLOPT_ENCODING => ",
+				CURLOPT_ENCODING => "",
 				CURLOPT_MAXREDIRS => 10,
 				CURLOPT_TIMEOUT => 30,
 				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
