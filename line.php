@@ -75,7 +75,8 @@ if ( sizeof($request_array['events']) > 0 )
 				echo "cURL Error #:" . $err;
 			} else {
 				echo $response;
-			}	
+			}
+			$reply_message = $response;
  		}
 	   	//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
    }
