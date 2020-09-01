@@ -45,7 +45,7 @@ if ( sizeof($request_array['events']) > 0 )
 		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'."\n".'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน'."\n".'รักษาอยู่ '. $obj->{'Hospitalized'}.' คน'."\n".'เสียชีวิต '. $obj->{'Deaths'}.' คน'."\n".'ผู้ติดชื้อใหม่ '. $obj->{'NewConfirmed'}.' คน'."\n".'รักษาหายแล้วในวันนี้ '. $obj->{'NewRecovered'}.' คน'."\n".'ผู้เข้ารับการรักษาในวันนี้ '. $obj->{'NewHospitalized'}.' คน'."\n".'เสียชีวิติในวันนี้ '. $obj->{'NewDeaths'}.' คน'. "\n".'รายงานของวันที่ '. $obj->{'UpdateDate'};
 		}
 	   	
-// 	   	$str_msg = explode(" ",$text);
+ 	   	$str_msg = explode(" ",$text);
 // 	   	if(str_msg[0]=="@บอท"){
 // 		$curl = curl_init();
 // 			curl_setopt_array($curl, array(
