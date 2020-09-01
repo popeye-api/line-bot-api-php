@@ -45,38 +45,38 @@ if ( sizeof($request_array['events']) > 0 )
 		     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' คน'."\n".'รักษาหายแล้ว '. $obj->{'Recovered'}.' คน'."\n".'รักษาอยู่ '. $obj->{'Hospitalized'}.' คน'."\n".'เสียชีวิต '. $obj->{'Deaths'}.' คน'."\n".'ผู้ติดชื้อใหม่ '. $obj->{'NewConfirmed'}.' คน'."\n".'รักษาหายแล้วในวันนี้ '. $obj->{'NewRecovered'}.' คน'."\n".'ผู้เข้ารับการรักษาในวันนี้ '. $obj->{'NewHospitalized'}.' คน'."\n".'เสียชีวิติในวันนี้ '. $obj->{'NewDeaths'}.' คน'. "\n".'รายงานของวันที่ '. $obj->{'UpdateDate'};
 		}
 	   	
-	   	$str_msg = explode(" ",$text);
-	   	if(str_msg[0]=="@บอท"){
-		$curl = curl_init();
-			curl_setopt_array($curl, array(
-				CURLOPT_URL => "https://thaiqa.p.rapidapi.com/predict",
-				CURLOPT_RETURNTRANSFER => true,
-				CURLOPT_FOLLOWLOCATION => true,
-				CURLOPT_ENCODING => ",
-				CURLOPT_MAXREDIRS => 10,
-				CURLOPT_TIMEOUT => 30,
-				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-				CURLOPT_CUSTOMREQUEST => "POST",
-				CURLOPT_POSTFIELDS => "[    {      "paragraphs": [        {          "qas": [            {              "id": "1",              "question": '.$str_msg[1].'              }          ],          "context": "ราคาทองคำแท่งวันนี้ ราคาขาย 28,800.00บาท ราคาซื้อ 28,700.00บาท ชื่อผู้พัฒนา นางสาวอภิชญา ขวัญจังหวัด 61160080"        }      ]    }]",
-				CURLOPT_HTTPHEADER => array(
-					"accept: application/json",
-					"content-type: application/json",
-					"x-rapidapi-host: thaiqa.p.rapidapi.com",
-					"x-rapidapi-key: 4bd72c1600msh0bcbcebb01e9159p179c24jsn4b9ae96378ce"
-				),
-			));
+// 	   	$str_msg = explode(" ",$text);
+// 	   	if(str_msg[0]=="@บอท"){
+// 		$curl = curl_init();
+// 			curl_setopt_array($curl, array(
+// 				CURLOPT_URL => "https://thaiqa.p.rapidapi.com/predict",
+// 				CURLOPT_RETURNTRANSFER => true,
+// 				CURLOPT_FOLLOWLOCATION => true,
+// 				CURLOPT_ENCODING => ",
+// 				CURLOPT_MAXREDIRS => 10,
+// 				CURLOPT_TIMEOUT => 30,
+// 				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+// 				CURLOPT_CUSTOMREQUEST => "POST",
+// 				CURLOPT_POSTFIELDS => "[    {      "paragraphs": [        {          "qas": [            {              "id": "1",              "question": '.$str_msg[1].'              }          ],          "context": "ราคาทองคำแท่งวันนี้ ราคาขาย 28,800.00บาท ราคาซื้อ 28,700.00บาท ชื่อผู้พัฒนา นางสาวอภิชญา ขวัญจังหวัด 61160080"        }      ]    }]",
+// 				CURLOPT_HTTPHEADER => array(
+// 					"accept: application/json",
+// 					"content-type: application/json",
+// 					"x-rapidapi-host: thaiqa.p.rapidapi.com",
+// 					"x-rapidapi-key: 4bd72c1600msh0bcbcebb01e9159p179c24jsn4b9ae96378ce"
+// 				),
+// 			));
 
-			$response = curl_exec($curl);
-			$err = curl_error($curl);
+// 			$response = curl_exec($curl);
+// 			$err = curl_error($curl);
 
-			curl_close($curl);
+// 			curl_close($curl);
 
-			if ($err) {
-				echo "cURL Error #:" . $err;
-			} else {
-				echo $response;
-			}	
-		}
+// 			if ($err) {
+// 				echo "cURL Error #:" . $err;
+// 			} else {
+// 				echo $response;
+// 			}	
+// 		}
 	   	//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
    }
    else
